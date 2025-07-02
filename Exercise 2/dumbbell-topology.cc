@@ -14,7 +14,7 @@ void CwndChange(Ptr<OutputStreamWrapper> stream, uint32_t oldCwnd, uint32_t newC
 
 int main() {
     Time::SetResolution(Time::NS);
-    Config::SetDefault("ns3::TcpL4Protocol::SocketType", TypeIdValue(TcpNewReno::GetTypeId()));
+    Config::SetDefault("ns3::TcpL4Protocol::SocketType", TypeIdValue(TcpReno::GetTypeId()));
 
     NodeContainer leftNodes, rightNodes, bridgeNodes;
     leftNodes.Create(2);    
